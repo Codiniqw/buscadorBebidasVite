@@ -12,8 +12,8 @@ const Bebida = ({ bebida }) => {
                         className="w-100 text-uppercase mt-2"
                         variant="warning"
                         onClick={() => {
-                            handleModalClick()
                             handlebebidaIdClick(bebida.idDrink)
+                            handleModalClick()
                         }}
                     >Ver Receta</Button>
                 </Card.Body>
