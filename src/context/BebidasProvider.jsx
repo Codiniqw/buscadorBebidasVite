@@ -29,9 +29,13 @@ const BebidasProvider = ({ children }) => {
     }, [bebidaId])
 
     const consultarBebida = async datos => {
+        const category = `${datos.categoria}`.toString()
+        let result = category.replace(/\s/g, '_')
+        console.log(result)
         try {
-            const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${datos.nombre}&c=${datos.categoria}`
+            const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${datos.nombre}&c=${result}`
             const { data } = await axios(url)
+            console.log(url)
             setBebidas(data.drinks)
         } catch (error) {
             console.log(error)
