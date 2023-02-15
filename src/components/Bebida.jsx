@@ -13,7 +13,7 @@ const Bebida = ({ bebida }) => {
                         variant="warning"
                         onClick={() => {
                             handlebebidaIdClick(bebida.idDrink)
-                            handleModalClick()
+                            setTimeout(()=>{handleModalClick()},300)
                         }}
                     >Ver Receta</Button>
                 </Card.Body>
